@@ -3,3 +3,13 @@
   Showing of 'interpolate' filter:
   {{ 'Current version is v%VERSION%.' | interpolate }}
 </p>
+<div class="chart" ng-controller="PieController">
+<div class="chart__header">
+  <h2 class="chart__title">GPA <strong>3.4</strong></h2>
+  <span class="chart__icon">&#9787</span>
+</div>
+<svg class="chart__content">
+    <!--path fill="#0d233a" class="chart__pie" ng-repeat="arc in arcs" ng-attr-d="{{arc}}"></path-->
+    <path class="chart__pie" ng-repeat="arc in arcs" ng-attr-fill="{{arc.c}}" ng-attr-d="{{arc.d}}"></path>
+</svg>
+</div>

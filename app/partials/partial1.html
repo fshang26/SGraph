@@ -1,1 +1,11 @@
 <p>This is the partial for view 1.</p>
+  <div class="chart" ng-controller="LineController">
+    <div class="chart__header">
+      <h2 class="chart__title">GPA <strong>3.4</strong></h2>
+      <span class="chart__icon">&#9787</span>
+    </div>
+    <svg class="chart__content">
+      <path class="chart__line" ng-attr-d="{{linePath()}}"></path>
+      <circle class="chart__circle" r="5" ng-repeat="p in points" ng-attr-cx="{{p.x}}" ng-attr-cy="{{p.y}}"></circle>
+    </svg>
+  </div>
